@@ -1,0 +1,59 @@
+buildscript {
+    ext {
+        springBootVersion = '3.0.3'
+        lombokVersion = '1.18.24'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://repo.spring.io/snapshot' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.13.RELEASE'
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath 'gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.10'
+    }
+}
+
+//root 까지 포함
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+}
+
+//하위 모든 모듈 프로젝트 공통 세팅
+subprojects {
+    group 'dev.be'
+    version '1.0'
+
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    //소스 컴파일시 사용
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    }
+}
+
+project(':module-api') {
+    dependencies {
+        implementation project(path: ':module-common', configuration: 'default')
+    }
+}
+
+project(':module-common') {
+    dependencies {
+    }
+}
+
