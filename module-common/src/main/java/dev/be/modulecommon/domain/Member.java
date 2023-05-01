@@ -11,7 +11,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,4 +23,8 @@ public class Member {
 	@Column
 	private String name;
 
+	@Builder
+	public Member(String name) {
+		this.name = name;
+	}
 }
