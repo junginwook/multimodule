@@ -4,6 +4,8 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
+    hikari:
+      maximum-pool-size: 5
     url: jdbc:mysql://3.36.78.190:3306/project?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: admin
     password: Wjddlsdnr12!
