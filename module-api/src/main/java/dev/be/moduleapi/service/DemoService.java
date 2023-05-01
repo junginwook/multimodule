@@ -22,7 +22,11 @@ public class DemoService {
 	private final MemberRepository memberRepository;
 
 	public String save() {
-		System.out.println("name: " + name);
+		Member member = Member.builder()
+				.name("inwook")
+				.build();
+
+		memberRepository.save(member);
 		return "save";
 	}
 
