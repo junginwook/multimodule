@@ -24,6 +24,11 @@ public class DemoController {
 		return demoService.find();
 	}
 
+	@GetMapping("/articles")
+	public String articles() {
+		return "articles";
+	}
+
 	@GetMapping("/exception")
 	public String exception() {
 		return demoService.exception();
