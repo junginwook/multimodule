@@ -1,4 +1,4 @@
-package dev.be.moduleapi.exception;
+package dev.be.modulecommon.exception;
 
 import dev.be.modulecommon.enums.CodeEnum;
 import lombok.AllArgsConstructor;

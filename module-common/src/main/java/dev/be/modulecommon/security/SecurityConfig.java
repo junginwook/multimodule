@@ -1,4 +1,4 @@
-package dev.be.moduleapi.config;
+package dev.be.modulecommon.security;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 

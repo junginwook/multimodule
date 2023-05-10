@@ -1,6 +1,6 @@
 package dev.be.moduleapi.service;
 
-import dev.be.moduleapi.exception.CustomException;
+import dev.be.modulecommon.exception.CustomException;
 import dev.be.modulecommon.domain.Member;
 import dev.be.modulecommon.enums.CodeEnum;
 import dev.be.modulecommon.repository.MemberRepository;
