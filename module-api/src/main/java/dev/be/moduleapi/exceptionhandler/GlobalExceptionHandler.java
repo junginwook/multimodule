@@ -1,6 +1,6 @@
 package dev.be.moduleapi.exceptionhandler;
 
-import dev.be.moduleapi.exception.CustomException;
+import dev.be.modulecommon.exception.CustomException;
 import dev.be.moduleapi.response.CommonResponse;
 import dev.be.modulecommon.enums.CodeEnum;
 import org.springframework.web.bind.annotation.ExceptionHandler;
