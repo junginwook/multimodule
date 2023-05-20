@@ -18,6 +18,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.google.cloud.tools.jib' version '3.3.2' apply false
+}
+
 //root 까지 포함
 allprojects {
     apply plugin: 'java'
@@ -31,6 +35,7 @@ subprojects {
 
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'com.google.cloud.tools.jib'
 
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17

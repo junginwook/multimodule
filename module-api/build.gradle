@@ -12,3 +12,30 @@ bootJar {
     }
 }
 
+jib {
+    from {
+        image = 'openjdk:17-alpine'
+    }
+    container {
+
+//        entrypoint = ['java', '-Dspring.profiles.active=test', '-jar', 'module-api-1.0.jar']
+
+        mainClass = 'dev.be.moduleapi.ModuleApiApplication'
+        jvmFlags = ['-Xms512m', '-Xmx512m', '-Xdebug', '-XshowSettings:vm', '-XX:+UnlockExperimentalVMOptions', '-XX:+UseContainerSupport']
+        ports = ['8080']
+
+        environment = [SPRING_OUTPUT_ANSI_ENABLED: "ALWAYS"]
+        labels = [version:project.version, name:project.name, group:project.group]
+
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+        format = 'Docker'
+    }
+    extraDirectories {
+        paths {
+            path {
+                from = file('build/libs')
+            }
+        }
+    }
+}
+
