@@ -6,7 +6,7 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 10
-    url: jdbc:mysql://3.37.62.35:3306/project?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://127.0.0.1:3306/project?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: admin
     password: Wjddlsdnr12!
     driver-class-name: com.mysql.cj.jdbc.Driver
