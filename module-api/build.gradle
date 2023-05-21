@@ -17,9 +17,7 @@ jib {
         image = 'openjdk:17-alpine'
     }
     container {
-
 //        entrypoint = ['java', '-Dspring.profiles.active=test', '-jar', 'module-api-1.0.jar']
-
         mainClass = 'dev.be.moduleapi.ModuleApiApplication'
         jvmFlags = ['-Xms512m', '-Xmx512m', '-Xdebug', '-XshowSettings:vm', '-XX:+UnlockExperimentalVMOptions', '-XX:+UseContainerSupport']
         ports = ['8080']
