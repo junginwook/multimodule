@@ -6,9 +6,9 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 10
-    url: jdbc:mysql://127.0.0.1:3306/project?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://test-db.ct5ct9ep7o58.ap-northeast-2.rds.amazonaws.com/project?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: admin
-    password: Wjddlsdnr12!
+    password: wjddlsdnr12!
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database: mysql
