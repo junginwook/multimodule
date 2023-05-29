@@ -55,9 +55,15 @@ subprojects {
     }
 }
 
-project(':module-api') {
+project(':module-api-service') {
     apply plugin: 'com.google.cloud.tools.jib'
 
+    dependencies {
+        implementation project(path: ':module-common', configuration: 'default')
+    }
+}
+
+project(':module-batch') {
     dependencies {
         implementation project(path: ':module-common', configuration: 'default')
     }
