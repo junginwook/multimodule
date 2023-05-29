@@ -1,7 +1,5 @@
 package dev.be.modulebatch.jobs;
 
-import jakarta.persistence.EntityManagerFactory;
-import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
